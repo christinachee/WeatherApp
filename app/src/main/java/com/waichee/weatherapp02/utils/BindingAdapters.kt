@@ -10,7 +10,6 @@ import timber.log.Timber
 fun bindWeatherIcon(imageView: ImageView, icon: String?) {
     icon?.let {
         Picasso.get().load("http://openweathermap.org/img/wn/$icon@2x.png").into(imageView)
-        Timber.i("http://openweathermap.org/img/wn/$icon.png")
     }
 }
 

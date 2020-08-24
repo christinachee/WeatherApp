@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.waichee.weatherapp02.data.entities.WeatherResponse
 import com.waichee.weatherapp02.databinding.WeatherFragmentBinding
+import com.waichee.weatherapp02.utils.DateTimeConverter
 import com.waichee.weatherapp02.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -52,7 +53,7 @@ class WeatherFragment: Fragment() {
         binding.main.text = weather.current.weather[0].main
         binding.temperature.text = weather.current.temp.toInt().toString()
         binding.location.text = weather.timezone
-        binding.currentTime.text = weather.current.dt.toString()
+        binding.currentTime.text = DateTimeConverter.getDateTimeString(weather.current.dt)
     }
 
     private fun setupRecyclerView() {

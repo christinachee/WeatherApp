@@ -23,7 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/rv_icon"
-            android:text="Tuesday"/>
+            app:weekday="@{daily.dt}"/>
 
         <ImageView
             android:id="@+id/rv_icon"

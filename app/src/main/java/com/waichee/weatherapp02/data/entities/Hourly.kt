@@ -29,5 +29,5 @@ data class Hourly(
     @Json(name = "weather")
     val weather: List<Weather> = listOf(),
     @Json(name = "pop")
-    val pop: Int = 0
+    val pop: Double = 0.0
 )

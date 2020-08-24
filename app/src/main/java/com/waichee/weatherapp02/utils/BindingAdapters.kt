@@ -20,3 +20,10 @@ fun bindTemp(textView: TextView, temperature: Double?) {
         textView.text = temperature.toInt().toString()
     }
 }
+
+@BindingAdapter("weekday")
+fun bindWeekday(textView: TextView, dt: Int?) {
+    dt?.let {
+        textView.text = DateTimeConverter.getWeekdayString(dt)
+    }
+}
